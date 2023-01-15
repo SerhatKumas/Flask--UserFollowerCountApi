@@ -5,8 +5,8 @@ from WebScraperLevel.InstragramScrapper import InstagramScrapper
 from app import app
 
 
-@app.route('/instagramApi/follower-report')
-def ask_question():
+@app.route('/instagram-api/follower-report')
+def instagram_follower_count_reporter():
     username = request.args.get("username")
 
     instagram_api_controller = InstagramDataManager(
@@ -16,8 +16,8 @@ def ask_question():
     return answer
 
 
-@app.route('/instagramApi/follower-array-report')
-def display_answer_repository_config_information():
+@app.route('/instagram-api/follower-array-report')
+def instagram_follower_count_array():
     username = request.args.get("username")
 
     instagram_api_controller = InstagramDataManager(
