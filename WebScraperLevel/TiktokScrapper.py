@@ -1,3 +1,6 @@
+# TIKTOK MODULE WEB SCRAPY
+
+# Imports for required modules
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
@@ -6,29 +9,35 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 class TiktokScrapper:
 
+    # Initialization method
     def __init__(self, username):
         self.username = username
 
+    # Object destroy method
     def __del__(self):
         print("Tiktok Scrapper object is destroyed.")
 
+    # Data scraping method
     def scrape_tiktok_data(self):
-        # instantiate options
+        # Instantiate options
         options = webdriver.ChromeOptions()
-        # run browser in headless mode
+        # Run browser in headless mode
         options.headless = True
-        # instantiate driver
+        # Tiktok is dynamically generated site, so selenium is used for scrapping
+        # Instantiate driver
         driver = webdriver.Chrome(service=ChromeService(
             ChromeDriverManager().install()), options=options)
-        # load website
+        # Load website
         url = 'https://www.tiktok.com/@' + self.username
-        # get the entire website content
+        # Get the entire website content
         driver.get(url)
-        # select elements by class name tiktok-1kd69nj-DivNumber
+        # Select elements by class name tiktok-1kd69nj-DivNumber
         elements = driver.find_elements(By.CLASS_NAME, 'tiktok-1kd69nj-DivNumber')
         answer_array = []
+        # Selecting required tags for information
         for elem in elements:
             answer_array.append(elem.find_element(By.TAG_NAME, 'strong').text)
+        # Return type is array
         return answer_array
 
 # Reference
