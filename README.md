@@ -29,37 +29,37 @@
 - /github-api/follower-report  => String report answer (GET request)
 
 
-- /github-api/follower-array-report => Number array anser (GET request)
+- /github-api/follower-array-report => Number array answer (GET request)
 
 
 - /instagram-api/follower-report  => String report answer (GET request)
 
 
-- /instagram-api/follower-array-report => Number array anser (GET request)
+- /instagram-api/follower-array-report => Number array answer (GET request)
 
 
 - /linkedin-api/follower-report  => String report answer (GET request)
 
 
-- /linkedin-api/follower-array-report => Number array anser (GET request)
+- /linkedin-api/follower-array-report => Number array answer (GET request)
 
 
 - /youtube-api/follower-report  => String report answer (GET request)
 
 
-- /youtube-api/follower-array-report => Number array anser (GET request)
+- /youtube-api/follower-array-report => Number array answer (GET request)
 
 
 - /tiktok-api/follower-report  => String report answer (GET request)
 
 
-- /tiktok-api/follower-array-report => Number array anser (GET request)
+- /tiktok-api/follower-array-report => Number array answer (GET request)
 
 
 - /twitter-api/follower-report  => String report answer (GET request)
 
 
-- /twitter-api/follower-array-report => Number array anser (GET request)
+- /twitter-api/follower-array-report => Number array answer (GET request)
 
 
 ## Technologies
